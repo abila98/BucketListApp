@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - ant package
+
+artifacts:
+  files:
+    - '**/bucketlist.war'  # Include the .war file
+  discard-paths: yes  # Remove the directory structure in the output
+  base-directory: 'war'
